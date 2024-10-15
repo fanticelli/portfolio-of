@@ -1,0 +1,555 @@
+.cabecalho__container{
+    width: 100%;
+}
+.cabecalho{
+    display: flex;
+    width: 100%;
+}
+
+.img-cabecalho {
+    height: 466px;
+}
+
+/* TITULOS */
+.cabecalho__titulo{
+    margin-top: 215px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 360px;
+}
+
+.titulo-descricao{
+    color: white;
+    margin: 10px 0;
+    font-family: var(--font-principal);
+    font-size: 1.25rem;
+}
+
+.descricao,
+.descricao__skills{
+    font-family: var(--font-principal);
+    font-size: 1.8rem;
+    text-align: left;
+    width: 560px;
+    margin-top: 60px;
+}
+
+.descricao__skills{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+strong{
+    color: var(--cor-complementar);
+}
+
+.nome__projetos{
+    font-family: var(--font-principal);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--cor-complementar);
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-curso,
+.titulo-descricao{
+    font-weight: 700;
+}
+
+.titulo-curso,
+.titulo-ano{
+    color: var(--cor-secundaria);
+    font-family: var(--font-principal);
+    font-size: 1.25rem;
+}
+
+/* FORMAÇÃO CARD */
+.sobre{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin-top: 208px;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.formacao{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formacao__item{
+    background: var(--cor-principal);
+    width: 560px;
+    height: 125px;
+    border-radius: 10px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.linha{
+   width: 4px; 
+   height: 80px;
+   background-color: white;
+   border-radius: 4px;
+   margin-left: 16px;
+}
+
+.card__lista{
+    display: flex;
+    align-items: stretch;
+    gap: 48px;
+    justify-content: center;
+}
+
+.lista__item{
+    list-style-type: none;
+}
+
+/* CARROSSEL */
+.carrossel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.carrossel__certificado {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.certificado-container {
+    position: relative;
+}
+
+.certificado-container {
+    background-image: url('/assets/certificado-borda.png');
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    margin-bottom: 60px;
+    width: 300%;
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.slide img {
+    display: block;
+    border-radius: 10px;
+    width: 560px;
+    height: 441px;
+    object-fit: cover;
+}
+
+#slide1:checked ~ .slides {
+    transform: translateX(33.33%); 
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-33.33%);
+}
+
+.radio {
+    display: flex; 
+    gap: 10px; 
+    align-items: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.radio-circle {
+    display: inline-block;
+    width: 10px; 
+    height: 10px; 
+    border: 4px solid var(--cor-complementar); 
+    border-radius: 50%; 
+    background-color: transparent; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#slide1:checked ~ .radio .radio-circle:nth-child(1),
+#slide2:checked ~ .radio .radio-circle:nth-child(2),
+#slide3:checked ~ .radio .radio-circle:nth-child(3),
+#slide4:checked ~ .radio .radio-circle:nth-child(4),
+#slide5:checked ~ .radio .radio-circle:nth-child(5) {
+    background-color: var(--cor-complementar);
+    width: 34px;
+}
+
+label[for="slide4"],
+label[for="slide5"] {
+    display: none;
+}
+
+/* PROJETOS CARD */
+.projetos__grupo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.projeto-alura::before{
+    background-image: url("/assets/aluraplay.jpg");
+}
+
+.projeto-jornada::before{
+    background-image: url("/assets/viagens.jpg");
+}
+
+.projeto-floricultura::before{
+    background-image: url("/assets/floricultura.jpg");
+}
+
+.projetos__itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: top;
+    width: 440px;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+.projetos__itens::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    filter: brightness(0.6);
+    z-index: 1;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.radio-mobile {
+    display: none;
+}
+
+/* LINGUAGENS */
+.icon__linguagens {
+    display: flex;
+    gap: 2px;
+    background-repeat: no-repeat; 
+    z-index: 2;
+}
+
+.icon__linguagens img {
+    width: 50px; 
+    height: 50px; 
+}
+
+/* CONTATO */
+.contato{
+    display: flex;
+    flex-direction: row;
+    margin-top: 208px;
+    gap: 16px;
+}
+
+form,
+.contato__img{
+    padding: 10px;
+}
+
+.descricao__contato{
+    font-family: var(--font-principal);
+    font-size: 1.3rem;
+    font-weight: 500;
+    max-width: 100%;
+    margin-top: 60px;
+    padding: 10px;
+}
+
+.contato_conteudo{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 60px;
+}
+
+.contato__nome,
+.contato__email{
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.contato__icon p{
+    font-family: var(--font-principal);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* FORMULARIO */
+.input-line,
+.textarea {
+    background-color: var(--cor-terciaria);
+    border: 2px solid #D9D9D9;
+    font-family: var(--font-principal);
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 10px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    padding: 14px;
+    display: flex;
+    width: 50%;
+}
+
+.input-grupo{
+    display: flex;
+    gap: 16px;
+    margin-top: 60px;
+}
+
+#assunto,
+#mensagem{
+    width: 660px;
+}
+
+.botao{
+    display: flex;
+    width: 160px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    font-family: var(--font-principal);
+    font-size: 1.3rem;
+    background: var(--cor-principal);
+}
+
+.botao:hover{
+    border: 2px solid var(--cor-secundaria);
+    cursor: pointer;
+}
+
+input:focus,
+textarea:focus{
+    border: 2px solid #013565;
+}
+
+.rodape{
+    padding: 32px;
+    width: 100%;
+    background-color: black;
+    margin-top: 60px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-principal);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ADAPTAÇÃO */
+@media(max-width: 1024px){
+    .img-cabecalho {
+        height: 400px;
+    }
+    
+    .cabecalho__titulo{
+        justify-content: center;
+        margin-left: 26px;
+    }
+
+    .cabecalho__titulo img{
+        width: 800px;
+    }
+
+    .sobre{
+        margin-top: 180px;
+    }
+
+    .card__lista{
+        gap: 28px;
+    }
+
+    .projetos__grupo{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .formacao{
+        margin-top: 20px;
+    }
+
+    .contato{
+        flex-wrap: wrap;
+        gap: 60px;
+        margin-top: 180px;
+        justify-content: center;
+    }
+
+    .contato_conteudo{
+        width: 100%;
+    }
+
+    form{
+        max-width: 100%;
+    }
+
+    .slide img {
+        width: 380px;
+        height: 280px;
+    }
+}
+
+@media(max-width: 769px) {
+    .img-cabecalho {
+        height: 200px;
+    }
+
+    .cabecalho__titulo{
+        margin-top: 220px;
+        margin-left: -12px;
+    }
+
+    .cabecalho__titulo img{
+        width: 600px;
+    }
+
+    #slide2:checked ~ .slides {
+        transform: translateX(0.4%);
+    }
+
+    #slide3:checked ~ .slides {
+        transform: translateX(-32.9%);
+    }
+
+    #slide4:checked ~ .slides {
+        transform: translateX(-66%);
+    }
+    #slide5:checked ~ .slides {
+        transform: translateX(-99.2%);
+    }
+
+    label[for="slide4"],
+    label[for="slide5"] {
+    display: inline-block;
+    }
+
+    #assunto,
+    #mensagem{
+        width: 580px;
+    }   
+
+    .slide img {
+        width: 560px;
+        height: 441px;
+    }
+}
+
+@media(max-width: 480px){
+    .cabecalho__titulo img{
+        width: 400px;
+    }
+
+    .cabecalho__titulo{
+        margin-top: 220px;
+        margin-left: -20px;
+    }
+
+    .sobre,
+    .contato{
+        margin-top: 80px;
+    }
+
+    .descricao{
+    font-size: 1.3rem;
+    width: 400px;
+    margin-top: 40px;
+    }
+
+    .formacao__item{
+        width: 400px;
+        gap: 16px;
+    }
+
+    .titulo-descricao{
+        margin: 4px 0;
+    }
+
+    .descricao__skills{
+        margin: 40px 0;
+    }
+
+    .card__lista{
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .slide img {
+        width: 360px;
+        height: 280px;
+    }
+
+    #slide2:checked ~ .slides {
+        transform: translateX(-0.8%);
+    }
+
+    #slide3:checked ~ .slides {
+        transform: translateX(-34.2%);
+    }
+
+    #slide4:checked ~ .slides {
+        transform: translateX(-68.3%);
+    }
+    #slide5:checked ~ .slides {
+        transform: translateX(-101.7%);
+    }
+
+    .projetos__itens{
+        width: 380px;
+        height: 300px;
+    }
+
+    .descricao__contato{
+        margin-top: 40px;
+    }
+
+    .contato_conteudo{
+        gap: 16px;
+    }
+
+    #assunto,
+    #mensagem{
+        width: 360px;
+    }
+
+    .input-grupo{
+        margin-top: 40px;
+    }
+}

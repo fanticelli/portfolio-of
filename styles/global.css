@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Medula+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font-inicial: 'Medula One';
+    --font-principal: 'Raleway';
+    --font-secundaria: 'Bebas Neue';
+
+    --cor-principal: linear-gradient(
+        to right, 
+        #013565 0%, 
+        #005682 15%, 
+        #036C99 30%, 
+        #0CBFD6 50%, 
+        #30CDD2 55%, 
+        #26D4D5 65%, 
+        #59E0BF 75%, 
+        #B8F3B3 90%, 
+        #FBFAC2 100%
+    );
+
+    --cor-secundaria: #010107;
+    --cor-complementar: #FBFAC2;
+    --cor-terciaria: #D9D9D9;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 150px;
+    box-sizing: border-box;
+    background-color: var(--cor-secundaria);
+    color: #E0E0E0;
+}
+
+.skills,
+.certificados,
+.projetos{
+    margin-top: 208px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-home{
+    width: 100%;
+}
+
+@media(max-width: 1024px){
+    body{
+        margin: 0 80px;
+    }
+
+    .skills,
+    .certificados,
+    .projetos{
+    margin-top: 180px;
+    }
+}
+
+@media(max-width: 480px){
+    body{
+        margin: 0 40px;
+    }
+
+    .skills,
+    .certificados,
+    .projetos{
+        margin-top: 80px;
+    }
+}
