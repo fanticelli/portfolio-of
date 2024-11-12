@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/global.css">
+    
     <title>Portfólio</title>
 </head>
 
@@ -37,20 +38,18 @@
             <div class="formacao">
 
                 <div class="formacao__item">
-                    <div class="linha"></div>
 
                     <div class="item__conteudo">
-                        <h2 class="titulo-curso">Curso de extensão</h2>
+                        <h2 class="titulo-curso">EXTENSÃO</h2>
                         <p class="titulo-descricao">Programação basica de aplicativos Web Front-end</p>
                         <p class="titulo-ano">IFES | 2023</p>
                     </div>
                 </div>
     
                 <div class="formacao__item">
-                    <div class="linha"></div>
 
                     <div class="item__conteudo">
-                        <h2 class="titulo-curso">Curso de extensão</h2>
+                        <h2 class="titulo-curso">EXTENSÃO</h2>
                         <p class="titulo-descricao">Programação com Javascript e Node.js</p>
                         <p class="titulo-ano">IFES | 2023 - 2024</p>
                     </div>
@@ -60,7 +59,7 @@
 
         <section class="skills">
             <img src="assets/skills.png" alt="">
-            <p class="descricao__skills">Possuo conhecimento nas linguagens de <strong> HTML, CSS e Javascript.</strong></p>
+            <p class="descricao__skills">Possuo conhecimento nas linguagens de <a> HTML, CSS e Javascript.</a></p>
 
                 <ul class="card__lista">
                     <li class="lista__item">
@@ -140,31 +139,28 @@
             <div class="projetos__grupo">
                 <div class="projetos__itens projeto-alura">
                     <span class="icon__linguagens">
-                        <img src="/assets/html2.png" alt="HTML">
-                        <img src="/assets/css2.png" alt="CSS">
-                        <img src="/assets/figma2.png" alt="Figma">
+                        <img src="/assets/html.png" alt="HTML">
+                        <img src="/assets/css.png" alt="CSS">
+                        <img src="/assets/figma.png" alt="Figma">
                     </span>
-                    <h2 class="nome__projetos">Aluraplay</h2>
                 </div>
                 
                 <div class="projetos__itens projeto-jornada">         
                     <span class="icon__linguagens">
-                        <img src="/assets/html2.png" alt="HTML">
-                        <img src="/assets/css2.png" alt="CSS">
-                        <img src="/assets/js2.png" alt="JavaScript">
-                        <img src="/assets/figma2.png" alt="Figma">
+                        <img src="/assets/html.png" alt="HTML">
+                        <img src="/assets/css.png" alt="CSS">
+                        <img src="/assets/js.png" alt="JavaScript">
+                        <img src="/assets/figma.png" alt="Figma">
                     </span>
-                    <h2 class="nome__projetos">Jornada Viagens</h2>
                 </div>
                 
                 <div class="projetos__itens projeto-floricultura">    
                     <span class="icon__linguagens">
-                        <img src="/assets/html2.png" alt="HTML">
-                        <img src="/assets/css2.png" alt="CSS">
-                        <img src="/assets/js2.png" alt="JavaScript">
-                        <img src="/assets/figma2.png" alt="Figma">
+                        <img src="/assets/html.png" alt="HTML">
+                        <img src="/assets/css.png" alt="CSS">
+                        <img src="/assets/js.png" alt="JavaScript">
+                        <img src="/assets/figma.png" alt="Figma">
                     </span>
-                    <h2 class="nome__projetos">Oceanic Blooms</h2>
                 </div>
             </div>
             
@@ -178,6 +174,7 @@
                     <p class="descricao__contato">
                         Se estiver em busca de alguém dedicado e que deseja crescer junto de 
                         sua empresa e/ou marca, ficaria honrada com a oportunidade. 
+                        <br><br>
                         Fique a vontade para entrar com contato comigo!
                     </p>
                 </div>
@@ -195,7 +192,7 @@
                 </div>
             </div>
     
-                <form action="submit-form" method="post">
+                <form action="submit-form" method="post" id="contact-form">
 
                     <img src="assets/contat-form.png" alt="">
                     
@@ -207,7 +204,7 @@
                         <input type="text" placeholder="Assunto" name="assunto" class="input-line" id="assunto" required>
                         <textarea name="mensagem" id="mensagem" class="input-line" placeholder="Mensagem" required></textarea>
     
-                        <button class="botao">Enviar</button>
+                        <button class="botao" type="submit">Enviar</button>
                 </form>
         </section>
     </main>
@@ -215,7 +212,13 @@
     <footer class="rodape">
         <p>Desenvolvido por Paloma Fanticelli. &copy; 2024</p>
     </footer>
+
+    <div id="toast" class="toast">Mensagem enviada com sucesso!</div>
+
     <script src="script.js"></script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="form.js"></script>   
 </body>
 
 </html>
