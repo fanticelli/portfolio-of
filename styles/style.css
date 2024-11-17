@@ -662,4 +662,8 @@ section.visible {
     .input-grupo{
         margin-top: 40px;
     }
+
+    .input-grupo input{
+        width: 160px;
+    }
 }
